@@ -95,15 +95,25 @@ border: none;
     background-color: var(--Very-Dark-Grayish-Blue);
     display:hidden;
     visibility: hidden;
+    transition: 0.2s ease-in;
      
 }
 
 .shareButton:hover + .area3 {
     z-index: 1;
-   
+    background-color: var(--Very-Dark-Grayish-Blue);
     visibility: visible;
      
 }
+
+.shareButton:hover {
+
+    background-color: var(--Very-Dark-Grayish-Blue);
+    
+     
+}
+
+
 
 
 
@@ -157,14 +167,14 @@ border: none;
     background-color: var(--Very-Dark-Grayish-Blue);
     padding: 1.5rem 2rem;
    
-    transition: 0.2s ease-in;
+   
      width:100%;  
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-bottom :60%;
-right: -20%;
+bottom :0%;
+right: 0%;
 
 
     
@@ -408,18 +418,19 @@ div > img{
         position: absolute;
       display: flex;
       flex-direction: row;
-      justify-content:space-around;
+      justify-content:center;
       align-items: center;
-        border-radius: 1rem ;
+        border-radius: 0.7rem ;
         background-color: var(--Very-Dark-Grayish-Blue);
-        padding: 2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        transition: 0.2s ease-in;
-        width:19rem; 
+        padding: 1rem 1.2rem;
+        
+       
+        max-width: min(18rem, 100%); 
+
+        box-shadow: 0px 15px 25px -1px rgba(158, 175, 194, 0.664);
     
-    top :51%;
-    right:23.7%;
+    bottom :100%;
+    right:-19%;
     
         
     }
@@ -447,6 +458,6 @@ div > img{
     .socialMediaShare{
     
         align-content: flex-start;
-      margin-right: 0rem;
+      margin-right: 1rem;
     }
 }
