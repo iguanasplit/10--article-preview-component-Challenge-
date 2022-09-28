@@ -1,474 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+</head>
+
+<body>
+  <main class="card">
+
+    <div class="content">
+      <div class="area0">
+        <img id="hero" src="./images/drawers.jpg"
+          alt="forest green drawer decorated with a portrait and a vase" />
+      </div>
+      <section class="area1">
+        <h1>
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home</h1>
+
+        <p>Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.</p>
+      </section>
+
+      <div>
+        <section class="area2">
+
+          <div class="data">
+            <div>
+              <img id="avatar" src="./images/avatar-michelle.jpg" alt="michelle picture" />
+            </div>
+
+            <div class="profileData">
+              <p class="author">Michelle Appleton</p>
+              <p class="date">28 Jun 2020</p>
+            </div>
+          </div>
+
+          <button class="shareButton" aria-label="Share to social media">
+            <svg  aria-hidden="true" 
+            xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <path class="share"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+            </svg>
+          </button>
+
+
+          <span class="area3">
+
+            <p class="tooltiptext">share
+            <p>
+
+              <span class="socialMediaShare">
+                <span class="socialMediaShare2">
+
+                  <a href="#" class="socialMedia">
+                    <img class="icon" src="./images/icon-facebook.svg" alt="Open facebook website" />
+                  </a>
+  
+                  <a href="#" class="socialMedia">
+                    <img class="icon" src="./images/icon-pinterest.svg" alt="Open pinterest website" />
+                  </a>
+  
+  
+                  <a href="#" class="socialMedia">
+                    <img class="icon" src="./images/icon-twitter.svg" alt="Open Twitter website" />
+                  </a>
+                
+                </span>
+               
+
+              <button class="shareButton2" aria-label="Close Share to social media">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path class="share2"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+                </svg>
+              </button>
+            </span>
+
+          </span>
+
+        </section>
+      </div>
+
+
+    </div>
+
+  </main>
+
+</body>
 
-:root {
-
-
-
-    /*MAIN COLORS*/
-
-    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
-    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
-    --Grayish-Blue: hsl(212, 23%, 69%);
-    --Light-Grayish-Blue: hsl(210, 46%, 95%);
-
-    font-size: 13px;
-}
-
-
-* {
-
-    font-family: 'Manrope', sans-serif;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-
-}
-
-
-
-body {
-
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--Light-Grayish-Blue);
-
-
-    background-repeat: no-repeat;
-
-
-
-
-}
-
-
-/*ASSETS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-img {
-
-    display: block;
-    object-fit: cover;
-    width: 100%;
-
-
-}
-
-
-
-.shareButton {
-
-
-    border-radius: 20rem;
-
-    padding: 0.7rem 0.8rem;
-
-
-    border: none;
-
-    background-color: var(--Light-Grayish-Blue);
-
-
-
-    transition: 0.2s ease-in;
-}
-
-.shareButton2 {
-
-    border-radius: 40rem;
-    padding: 0.8rem;
-
-    justify-self: flex-end;
-    border: none;
-    background-color: var(--Desaturated-Dark-Blue);
-
-}
-
-svg {
-    transition: 0.2s ease-in;
-}
-
-.shareButton>svg {
-    fill: #6E8098;
-}
-
-.shareButton:hover>svg {
-    fill: white;
-
-}
-
-.shareButton+span {
-    z-index: 1;
-    background-color: var(--Very-Dark-Grayish-Blue);
-
-    display: hidden;
-    visibility: hidden;
-    transition: 0.2s ease-in;
-
-}
-
-.shareButton:hover+.area3 {
-    z-index: 1;
-    background-color: var(--Very-Dark-Grayish-Blue);
-    visibility: visible;
-
-}
-
-.shareButton:hover {
-
-    background-color: var(--Desaturated-Dark-Blue);
-
-
-}
-
-
-
-
-
-/*tooltip content*/
-.socialMediaShare {
-
-    align-content: flex-start;
-    margin-right: 4rem;
-}
-
-.socialMedia {
-    margin-left: 1rem;
-    background-color: transparent;
-    border: none;
-
-
-
-}
-
-.icon {
-
-    max-height: 2rem;
-    max-width: 2rem;
-
-}
-
-.tooltiptext {
-
-    text-transform: uppercase;
-    font-weight: 200;
-    letter-spacing: 0.2rem;
-    width: fit-content;
-    color: var(--Light-Grayish-Blue);
-}
-
-.area3 {
-    box-sizing: border-box;
-    z-index: 1;
-
-
-    max-width: min(24rem, 100%);
-
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 0rem 0rem 0.5rem 0.5rem;
-    background-color: var(--Very-Dark-Grayish-Blue);
-    padding: 1.5rem 2rem;
-
-
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    bottom: 0%;
-    right: 0%;
-
-
-
-}
-
-
-
-/*TEXT FORMAT***************************************************************************************************************/
-
-
-h1 {
-    color: var(--Very-Dark-Grayish-Blue);
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.7rem;
-
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-
-}
-
-
-
-h2 {
-    color: var(--Desaturated-Dark-Blue);
-
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
-
-}
-
-
-
-
-p {
-
-    color: var(--Desaturated-Dark-Blue);
-    font-size: 1rem;
-    text-align: start;
-    word-spacing: 0.1rem;
-    font-weight: 500;
-    line-height: 1.7rem;
-
-
-}
-
-.author {
-    color: var(--Very-Dark-Grayish-Blue);
-    font-weight: 700;
-}
-
-.date {
-    color: var(--Grayish-Blue);
-    font-weight: 500;
-    line-height: 1.3rem;
-}
-
-
-
-
-/* Introduction and outside reviews_____________________________________________________________________________________________*/
-
-
-
-
-/*Container_____________________________________________________________________________*/
-
-
-.area0 {
-
-
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-
-}
-
-.area1 {
-
-    padding: 2rem;
-    padding-bottom: 0rem;
-
-}
-
-#hero {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 13rem;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-}
-
-.area2 {
-
-    position: relative;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 2rem;
-    padding-bottom: 1.6rem;
-
-
-}
-
-
-
-.data {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-
-}
-
-.profileData {
-    margin-left: 1rem;
-}
-
-div>img {
-    object-fit: cover;
-    max-height: 3rem;
-    max-width: 3rem;
-    border-radius: 20rem;
-}
-
-
-
-
-
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    margin-top: 90px;
-    margin-bottom: 90px;
-    max-width: min(24rem, 100%);
-
-    overflow-wrap: break-word;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-
-    /* margin-left: 20px;
-    margin-right: 20px; */
-
-    border-radius: 1rem;
-    box-shadow: 0px 15px 30px -5px hsla(212, 23%, 69%, 0.40);
-    background-color: White;
-
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-
-
-
-/*CUSTOMER REVIEW CARDS+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Media Query______________________________________________________________________________________*/
-@media (min-width: 800px) {
-
-    .content {
-        margin-top: 90px;
-        margin-bottom: 90px;
-        max-width: min(50rem, 100%);
-
-        overflow-wrap: break-word;
-        word-break: keep-all;
-        overflow-wrap: anywhere;
-
-        display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-rows: 65% 35%;
-
-        margin-left: 20px;
-        margin-right: 20px;
-        border-radius: 1rem;
-    }
-
-    .content>article {
-
-        text-align: center;
-        padding: 2.2rem;
-
-    }
-
-    .area0 {
-
-        grid-row: 1 / span 2;
-
-        border-radius: 1rem 0rem 0rem 1rem;
-
-    }
-
-
-    #hero {
-
-        display: block;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-        border-radius: 1rem 0rem 0rem 1rem;
-    }
-
-    .area2 {
-
-        border-radius: 0rem 0rem 0rem 0.5rem;
-    }
-
-    .area3 {
-
-        border-radius: 0rem 0rem 0.5rem 0rem;
-
-    }
-
-
-    .area3 {
-        box-sizing: border-box;
-        z-index: 1;
-
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.7rem;
-        background-color: var(--Very-Dark-Grayish-Blue);
-        padding: 1rem 1.2rem;
-
-
-        max-width: min(18rem, 100%);
-
-        box-shadow: 0px 15px 25px -1px rgba(158, 175, 194, 0.664);
-
-        bottom: 100%;
-        right: -19%;
-
-
-    }
-
-    .area3 ::after {
-        content: " ";
-        position: absolute;
-        top: 100%;
-        /* At the bottom of the tooltip */
-        left: 50%;
-        margin-left: -15px;
-        border-width: 15px;
-        border-style: solid;
-        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
-
-    }
-
-    .shareButton2 {
-
-        display: none;
-
-        border-radius: 0rem;
-        padding: 0rem;
-    }
-
-
-    .socialMediaShare {
-
-        align-content: flex-start;
-        margin-right: 1rem;
-    }
-}
+</html>
